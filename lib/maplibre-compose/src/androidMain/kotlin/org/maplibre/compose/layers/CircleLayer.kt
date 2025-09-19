@@ -1,8 +1,8 @@
 package org.maplibre.compose.layers
 
-import org.maplibre.android.style.expressions.Expression as MLNExpression
-import org.maplibre.android.style.layers.CircleLayer as MLNCircleLayer
-import org.maplibre.android.style.layers.PropertyFactory
+import com.mapbox.mapboxsdk.style.expressions.Expression as MLNExpression
+import com.mapbox.mapboxsdk.style.layers.CircleLayer as MLNCircleLayer
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import org.maplibre.compose.expressions.ast.CompiledExpression
 import org.maplibre.compose.expressions.value.BooleanValue
 import org.maplibre.compose.expressions.value.CirclePitchAlignment

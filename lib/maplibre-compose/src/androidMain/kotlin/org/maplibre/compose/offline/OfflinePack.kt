@@ -4,9 +4,9 @@ import androidx.compose.runtime.mutableStateOf
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
-import org.maplibre.android.offline.OfflineRegion
-import org.maplibre.android.offline.OfflineRegionError
-import org.maplibre.android.offline.OfflineRegionStatus
+import com.mapbox.mapboxsdk.offline.OfflineRegion
+import com.mapbox.mapboxsdk.offline.OfflineRegionError
+import com.mapbox.mapboxsdk.offline.OfflineRegionStatus
 
 public actual class OfflinePack private constructor(internal val impl: OfflineRegion) :
   OfflineRegion.OfflineRegionObserver {

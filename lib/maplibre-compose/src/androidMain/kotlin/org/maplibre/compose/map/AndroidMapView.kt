@@ -13,9 +13,9 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.viewinterop.AndroidView
 import co.touchlab.kermit.Logger
-import org.maplibre.android.MapLibre
-import org.maplibre.android.maps.MapLibreMapOptions
-import org.maplibre.android.maps.MapView
+import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.maps.MapboxMapOptions
+import com.mapbox.mapboxsdk.maps.MapView
 import org.maplibre.compose.style.BaseStyle
 import org.maplibre.compose.style.SafeStyle
 
@@ -71,10 +71,10 @@ internal fun AndroidMapView(
     AndroidView(
       modifier = modifier,
       factory = { context ->
-        MapLibre.getInstance(context)
+        Mapbox.getInstance(context)
         MapView(
             context,
-            MapLibreMapOptions.createFromAttributes(context)
+          MapboxMapOptions.createFromAttributes(context)
               .foregroundLoadColor(foregroundLoadColor.toArgb())
               .textureMode(renderMode == RenderOptions.RenderMode.TextureView),
           )

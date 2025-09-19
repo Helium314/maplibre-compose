@@ -3,7 +3,7 @@ package org.maplibre.compose.sources
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
 import java.net.URI
-import org.maplibre.android.style.sources.ImageSource as MLNImageSource
+import com.mapbox.mapboxsdk.style.sources.ImageSource as MLNImageSource
 import org.maplibre.compose.util.PositionQuad
 import org.maplibre.compose.util.correctedAndroidUri
 import org.maplibre.compose.util.toLatLngQuad

@@ -1,8 +1,8 @@
 package org.maplibre.compose.layers
 
-import org.maplibre.android.style.layers.Layer as MlnLayer
-import org.maplibre.android.style.layers.Property
-import org.maplibre.android.style.layers.PropertyFactory
+import com.mapbox.mapboxsdk.style.layers.Layer as MlnLayer
+import com.mapbox.mapboxsdk.style.layers.Property
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 
 internal actual sealed class Layer {
   abstract val impl: MlnLayer

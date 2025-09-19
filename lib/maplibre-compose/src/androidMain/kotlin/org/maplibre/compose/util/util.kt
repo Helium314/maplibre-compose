@@ -27,10 +27,10 @@ import io.github.dellisd.spatialk.geojson.Polygon
 import io.github.dellisd.spatialk.geojson.Position
 import java.net.URI
 import java.net.URISyntaxException
-import org.maplibre.android.geometry.LatLng
-import org.maplibre.android.geometry.LatLngBounds
-import org.maplibre.android.geometry.LatLngQuad
-import org.maplibre.android.style.expressions.Expression as MLNExpression
+import com.mapbox.mapboxsdk.geometry.LatLng
+import com.mapbox.mapboxsdk.geometry.LatLngBounds
+import com.mapbox.mapboxsdk.geometry.LatLngQuad
+import com.mapbox.mapboxsdk.style.expressions.Expression as MLNExpression
 import org.maplibre.compose.expressions.ast.BooleanLiteral
 import org.maplibre.compose.expressions.ast.ColorLiteral
 import org.maplibre.compose.expressions.ast.CompiledExpression
@@ -171,15 +171,15 @@ internal fun Alignment.toGravity(layoutDir: LayoutDirection): Int {
   return h or v
 }
 
-internal fun Geometry.toMlnGeometry(): org.maplibre.geojson.Geometry {
+internal fun Geometry.toMlnGeometry(): com.mapbox.geojson.Geometry {
   return when (this) {
-    is Point -> org.maplibre.geojson.Point.fromJson(json())
-    is GeometryCollection -> org.maplibre.geojson.GeometryCollection.fromJson(json())
-    is LineString -> org.maplibre.geojson.LineString.fromJson(json())
-    is MultiLineString -> org.maplibre.geojson.MultiLineString.fromJson(json())
-    is MultiPoint -> org.maplibre.geojson.MultiPoint.fromJson(json())
-    is MultiPolygon -> org.maplibre.geojson.MultiPolygon.fromJson(json())
-    is Polygon -> org.maplibre.geojson.Polygon.fromJson(json())
+    is Point -> com.mapbox.geojson.Point.fromJson(json())
+    is GeometryCollection -> com.mapbox.geojson.GeometryCollection.fromJson(json())
+    is LineString -> com.mapbox.geojson.LineString.fromJson(json())
+    is MultiLineString -> com.mapbox.geojson.MultiLineString.fromJson(json())
+    is MultiPoint -> com.mapbox.geojson.MultiPoint.fromJson(json())
+    is MultiPolygon -> com.mapbox.geojson.MultiPolygon.fromJson(json())
+    is Polygon -> com.mapbox.geojson.Polygon.fromJson(json())
   }
 }
 

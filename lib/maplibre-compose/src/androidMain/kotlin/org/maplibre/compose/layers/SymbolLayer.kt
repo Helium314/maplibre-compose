@@ -1,8 +1,8 @@
 package org.maplibre.compose.layers
 
-import org.maplibre.android.style.expressions.Expression as MLNExpression
-import org.maplibre.android.style.layers.PropertyFactory
-import org.maplibre.android.style.layers.SymbolLayer as MLNSymbolLayer
+import com.mapbox.mapboxsdk.style.expressions.Expression as MLNExpression
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory
+import com.mapbox.mapboxsdk.style.layers.SymbolLayer as MLNSymbolLayer
 import org.maplibre.compose.expressions.ast.CompiledExpression
 import org.maplibre.compose.expressions.value.BooleanValue
 import org.maplibre.compose.expressions.value.ColorValue
@@ -203,7 +203,7 @@ internal actual class SymbolLayer actual constructor(id: String, source: Source)
     variableAnchorOffset: CompiledExpression<TextVariableAnchorOffsetValue>
   ) {
     impl.setProperties(
-      PropertyFactory.textVariableAnchorOffset(variableAnchorOffset.toMLNExpression())
+      //PropertyFactory.textVariableAnchorOffset(variableAnchorOffset.toMLNExpression())
     )
   }
 

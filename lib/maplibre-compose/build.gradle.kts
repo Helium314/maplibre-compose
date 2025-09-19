@@ -79,7 +79,6 @@ kotlin {
     androidMain {
       dependencies {
         api(libs.maplibre.android)
-        implementation(libs.maplibre.android.scalebar)
       }
     }
 

@@ -1,6 +1,6 @@
 package org.maplibre.compose.sources
 
-import org.maplibre.android.style.sources.Source as MLNSource
+import com.mapbox.mapboxsdk.style.sources.Source as MLNSource
 
 public actual sealed class Source {
   internal abstract val impl: MLNSource

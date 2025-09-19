@@ -1,7 +1,7 @@
 package org.maplibre.compose.sources
 
-import org.maplibre.android.style.sources.RasterSource as MLNRasterSource
-import org.maplibre.android.style.sources.TileSet
+import com.mapbox.mapboxsdk.style.sources.RasterSource as MLNRasterSource
+import com.mapbox.mapboxsdk.style.sources.TileSet
 import org.maplibre.compose.util.correctedAndroidUri
 import org.maplibre.compose.util.toLatLngBounds
 

@@ -2,19 +2,19 @@ package org.maplibre.compose.style
 
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
-import org.maplibre.android.style.sources.CustomGeometrySource
-import org.maplibre.android.style.sources.GeoJsonSource
-import org.maplibre.android.style.sources.ImageSource
-import org.maplibre.android.style.sources.RasterSource
-import org.maplibre.android.style.sources.Source
-import org.maplibre.android.style.sources.VectorSource
+import com.mapbox.mapboxsdk.style.sources.CustomGeometrySource
+import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
+import com.mapbox.mapboxsdk.style.sources.ImageSource
+import com.mapbox.mapboxsdk.style.sources.RasterSource
+import com.mapbox.mapboxsdk.style.sources.Source
+import com.mapbox.mapboxsdk.style.sources.VectorSource
 import org.maplibre.compose.layers.Layer
 import org.maplibre.compose.layers.UnknownLayer
 import org.maplibre.compose.sources.ComputedSource
 import org.maplibre.compose.sources.UnknownSource
 
-internal class AndroidStyle(style: org.maplibre.android.maps.Style) : Style {
-  private var impl: org.maplibre.android.maps.Style = style
+internal class AndroidStyle(style: com.mapbox.mapboxsdk.maps.Style) : Style {
+  private var impl: com.mapbox.mapboxsdk.maps.Style = style
 
   override fun addImage(id: String, image: ImageBitmap, sdf: Boolean) {
     impl.addImage(id, image.asAndroidBitmap(), sdf)

@@ -1,7 +1,7 @@
 package org.maplibre.compose.util
 
 import co.touchlab.kermit.Logger
-import org.maplibre.android.log.LoggerDefinition
+import com.mapbox.mapboxsdk.log.LoggerDefinition
 
 internal class KermitLoggerDefinition(private val kermit: Logger?) : LoggerDefinition {
   override fun v(tag: String, msg: String) {

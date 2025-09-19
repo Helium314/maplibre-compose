@@ -1,7 +1,7 @@
 package org.maplibre.compose.layers
 
-import org.maplibre.android.style.layers.HillshadeLayer as MLNHillshadeLayer
-import org.maplibre.android.style.layers.PropertyFactory
+import com.mapbox.mapboxsdk.style.layers.HillshadeLayer as MLNHillshadeLayer
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import org.maplibre.compose.expressions.ast.CompiledExpression
 import org.maplibre.compose.expressions.value.ColorValue
 import org.maplibre.compose.expressions.value.FloatValue

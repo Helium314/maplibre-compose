@@ -9,8 +9,8 @@ kermit = "2.0.8"
 kotlin-wrappers = "2025.9.8"
 kotlinx-coroutines = "1.10.2"
 ktor = "3.2.3"
-maplibre-android-sdk = "11.13.1"
-maplibre-android-plugins = "3.0.2"
+maplibre-android-sdk = "10.3.5"
+#maplibre-android-plugins = "2.0.2"
 maplibre-js = "4.7.1"              # TODO: is outdated; update to v5.x
 spatialk = "0.3.0"                 # TODO: is unmaintained; watch for https://github.com/maplibre/maplibre-java/pull/40
 
@@ -62,7 +62,7 @@ maplibre-android = { module = "org.maplibre.gl:android-sdk", version.ref = "mapl
 maplibre-androidOpenGL = { module = "org.maplibre.gl:android-sdk-opengl", version.ref = "maplibre-android-sdk" }
 maplibre-androidVulkan = { module = "org.maplibre.gl:android-sdk-vulkan", version.ref = "maplibre-android-sdk" }
 maplibre-androidDebug = { module = "org.maplibre.gl:android-sdk-debug", version.ref = "maplibre-android-sdk" }
-maplibre-android-scalebar = { module = "org.maplibre.gl:android-plugin-scalebar-v9", version.ref = "maplibre-android-plugins" }
+# maplibre-android-scalebar = { module = "org.maplibre.gl:android-plugin-scalebar-v9", version.ref = "maplibre-android-sdk" }
 simplejni-annotations = { module = "io.github.gershnik:smjni-jnigen-annotations", version.ref = "simplejni" }
 simplejni-kprocessor = { module = "io.github.gershnik:smjni-jnigen-kprocessor", version.ref = "simplejni" }
 spatialk-geojson = { group = "io.github.dellisd.spatialk", name = "geojson", version.ref = "spatialk" }

@@ -2,13 +2,13 @@ package org.maplibre.compose.sources
 
 import io.github.dellisd.spatialk.geojson.BoundingBox
 import io.github.dellisd.spatialk.geojson.FeatureCollection
-import org.maplibre.android.geometry.LatLngBounds
-import org.maplibre.android.style.sources.CustomGeometrySource
-import org.maplibre.android.style.sources.CustomGeometrySourceOptions
-import org.maplibre.android.style.sources.GeometryTileProvider
+import com.mapbox.mapboxsdk.geometry.LatLngBounds
+import com.mapbox.mapboxsdk.style.sources.CustomGeometrySource
+import com.mapbox.mapboxsdk.style.sources.CustomGeometrySourceOptions
+import com.mapbox.mapboxsdk.style.sources.GeometryTileProvider
 import org.maplibre.compose.util.toBoundingBox
 import org.maplibre.compose.util.toLatLngBounds
-import org.maplibre.geojson.FeatureCollection as MLNFeatureCollection
+import com.mapbox.geojson.FeatureCollection as MLNFeatureCollection
 
 public actual class ComputedSource : Source {
   override val impl: CustomGeometrySource

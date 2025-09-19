@@ -1,8 +1,8 @@
 package org.maplibre.compose.sources
 
 import java.net.URI
-import org.maplibre.android.style.sources.GeoJsonOptions as MLNGeoJsonOptions
-import org.maplibre.android.style.sources.GeoJsonSource as MLNGeoJsonSource
+import com.mapbox.mapboxsdk.style.sources.GeoJsonOptions as MLNGeoJsonOptions
+import com.mapbox.mapboxsdk.style.sources.GeoJsonSource as MLNGeoJsonSource
 import org.maplibre.compose.expressions.ast.ExpressionContext
 import org.maplibre.compose.util.correctedAndroidUri
 import org.maplibre.compose.util.toMLNExpression
@@ -34,7 +34,6 @@ public actual class GeoJsonSource : Source {
       withCluster(options.cluster)
       withClusterMaxZoom(options.clusterMaxZoom)
       withClusterRadius(options.clusterRadius)
-      withClusterMinPoints(options.clusterMinPoints)
       options.clusterProperties.forEach { (name, aggregator) ->
         withClusterProperty(
           name,

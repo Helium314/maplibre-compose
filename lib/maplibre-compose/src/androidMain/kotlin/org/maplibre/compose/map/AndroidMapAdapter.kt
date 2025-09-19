@@ -19,22 +19,22 @@ import kotlin.coroutines.suspendCoroutine
 import kotlin.math.roundToInt
 import kotlin.time.Duration
 import kotlin.time.DurationUnit
-import org.maplibre.android.camera.CameraPosition as MLNCameraPosition
-import org.maplibre.android.camera.CameraUpdateFactory
-import org.maplibre.android.geometry.VisibleRegion as MLNVisibleRegion
-import org.maplibre.android.gestures.MoveGestureDetector
-import org.maplibre.android.gestures.RotateGestureDetector
-import org.maplibre.android.gestures.ShoveGestureDetector
-import org.maplibre.android.gestures.StandardScaleGestureDetector
-import org.maplibre.android.log.Logger as MLNLogger
-import org.maplibre.android.maps.MapLibreMap as MLNMap
-import org.maplibre.android.maps.MapLibreMap
-import org.maplibre.android.maps.MapLibreMap.OnCameraMoveStartedListener
-import org.maplibre.android.maps.MapLibreMap.OnMoveListener
-import org.maplibre.android.maps.MapLibreMap.OnScaleListener
-import org.maplibre.android.maps.MapView
-import org.maplibre.android.maps.Style as MlnStyle
-import org.maplibre.android.style.expressions.Expression as MLNExpression
+import com.mapbox.mapboxsdk.camera.CameraPosition as MLNCameraPosition
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory
+import com.mapbox.mapboxsdk.geometry.VisibleRegion as MLNVisibleRegion
+import com.mapbox.android.gestures.MoveGestureDetector
+import com.mapbox.android.gestures.RotateGestureDetector
+import com.mapbox.android.gestures.ShoveGestureDetector
+import com.mapbox.android.gestures.StandardScaleGestureDetector
+import com.mapbox.mapboxsdk.log.Logger as MLNLogger
+import com.mapbox.mapboxsdk.maps.MapboxMap as MLNMap
+import com.mapbox.mapboxsdk.maps.MapboxMap
+import com.mapbox.mapboxsdk.maps.MapboxMap.OnCameraMoveStartedListener
+import com.mapbox.mapboxsdk.maps.MapboxMap.OnMoveListener
+import com.mapbox.mapboxsdk.maps.MapboxMap.OnScaleListener
+import com.mapbox.mapboxsdk.maps.MapView
+import com.mapbox.mapboxsdk.maps.Style as MlnStyle
+import com.mapbox.mapboxsdk.style.expressions.Expression as MLNExpression
 import org.maplibre.compose.camera.CameraMoveReason
 import org.maplibre.compose.camera.CameraPosition
 import org.maplibre.compose.expressions.ast.CompiledExpression
@@ -54,11 +54,11 @@ import org.maplibre.compose.util.toOffset
 import org.maplibre.compose.util.toPointF
 import org.maplibre.compose.util.toPosition
 import org.maplibre.compose.util.toRectF
-import org.maplibre.geojson.Feature as MLNFeature
+import com.mapbox.geojson.Feature as MLNFeature
 
 internal class AndroidMapAdapter(
   private val mapView: MapView,
-  private val map: MapLibreMap,
+  private val map: MapboxMap,
   private val scaleBar: AndroidScaleBar,
   layoutDir: LayoutDirection,
   density: Density,
@@ -70,15 +70,11 @@ internal class AndroidMapAdapter(
   internal var layoutDir: LayoutDirection = layoutDir
     set(value) {
       field = value
-      scaleBar.layoutDir = value
-      scaleBar.updateLayout()
     }
 
   internal var density: Density = density
     set(value) {
       field = value
-      scaleBar.density = value
-      scaleBar.updateLayout()
     }
 
   internal var logger: Logger? = logger
@@ -256,10 +252,7 @@ internal class AndroidMapAdapter(
     map.uiSettings.isCompassEnabled = value.isCompassEnabled
     map.uiSettings.compassGravity = value.compassAlignment.toGravity(layoutDir)
 
-    scaleBar.enabled = value.isScaleBarEnabled
-    scaleBar.alignment = value.scaleBarAlignment
-    scaleBar.padding = value.padding
-    scaleBar.updateLayout()
+
 
     with(density) {
       val left =

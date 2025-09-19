@@ -3,7 +3,7 @@ package org.maplibre.compose.map
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
-import org.maplibre.android.maps.MapView
+import com.mapbox.mapboxsdk.maps.MapView
 import org.maplibre.compose.style.SafeStyle
 
 internal class MapViewLifecycleObserver(

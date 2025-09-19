@@ -9,9 +9,9 @@ import androidx.compose.ui.platform.LocalContext
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
-import org.maplibre.android.MapLibre
-import org.maplibre.android.offline.OfflineManager as MLNOfflineManager
-import org.maplibre.android.offline.OfflineRegion
+import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.offline.OfflineManager as MLNOfflineManager
+import com.mapbox.mapboxsdk.offline.OfflineRegion
 
 @Composable
 public actual fun rememberOfflineManager(): OfflineManager {
@@ -41,7 +41,7 @@ internal class AndroidOfflineManager @UiThread internal constructor(context: Con
 
   private val impl =
     {
-      MapLibre.getInstance(context) // must be called before getting OfflineManager instance
+      Mapbox.getInstance(context) // must be called before getting OfflineManager instance
       MLNOfflineManager.getInstance(context)
     }()
 

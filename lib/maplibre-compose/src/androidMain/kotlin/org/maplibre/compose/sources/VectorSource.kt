@@ -1,8 +1,8 @@
 package org.maplibre.compose.sources
 
 import io.github.dellisd.spatialk.geojson.Feature
-import org.maplibre.android.style.sources.TileSet
-import org.maplibre.android.style.sources.VectorSource as MLNVectorSource
+import com.mapbox.mapboxsdk.style.sources.TileSet
+import com.mapbox.mapboxsdk.style.sources.VectorSource as MLNVectorSource
 import org.maplibre.compose.expressions.ast.Expression
 import org.maplibre.compose.expressions.ast.ExpressionContext
 import org.maplibre.compose.expressions.dsl.const
